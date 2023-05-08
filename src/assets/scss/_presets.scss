@@ -1,0 +1,65 @@
+@layer components {
+	//input
+	.input-group {
+		@apply w-full h-full;
+		@apply relative flex justify-center items-center gap-2;
+		@apply font-inter font-normal text-base text-base-gray-100;
+		@apply bg-base-gray-500 px-4;
+		@apply border-base-gray-700 border-2 rounded-lg;
+		@apply focus-within:border-purple-dark;
+
+		&:focus-within .input-info {
+			@apply flex;
+		}
+	}
+
+	.input-info {
+		@apply whitespace-nowrap;
+		@apply hidden;
+	}
+
+	.input-preset {
+		@apply w-full h-full;
+		@apply placeholder:text-base-gray-300;
+		@apply bg-transparent border-none py-4;
+		@apply transition-all duration-100;
+	}
+
+	//create button
+	.button-preset {
+		@apply w-full max-w-[90px] h-full;
+		@apply relative flex flex-row justify-center items-center gap-2;
+		@apply font-inter font-normal text-sm text-base-gray-100;
+		@apply transition-all duration-100;
+		@apply bg-blue-dark rounded-lg p-4;
+		@apply disabled:cursor-not-allowed;
+
+		&:not(:disabled) {
+			@apply hover:bg-blue hover:scale-[1.01];
+		}
+	}
+
+	//task
+	.task-preset {
+		@apply flex flex-row justify-center items-start gap-3;
+		@apply w-full h-auto;
+		@apply bg-base-gray-500 p-4 rounded-lg;
+		@apply border-base-gray-400 border-2;
+		@apply transition-all duration-100;
+	}
+
+	.checked-arrow {
+		&:checked:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 45%;
+			width: 6px;
+			height: 10px;
+			border: 2px solid white;
+			border-left: 1px;
+			border-top: 1px;
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+	}
+}

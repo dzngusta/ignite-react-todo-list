@@ -1,0 +1,40 @@
+//tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//imports
+@import 'presets';
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	scroll-behavior: smooth;
+	text-decoration: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	box-sizing: border-box;
+
+	::-webkit-scrollbar {
+		width: 0;
+	}
+}
+
+html {
+	@apply w-full h-full;
+}
+
+body {
+	@apply relative flex row-auto items-start content-center;
+	@apply w-full h-full;
+	@apply bg-base-gray-600;
+	@apply leading-5;
+
+	#root {
+		@apply w-screen h-screen;
+	}
+}
